@@ -1,39 +1,33 @@
 .App {
   text-align: center;
-  background-image: url(https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg);
+ 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.label{
+  color:red;
+  font-size: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signup_form{
+  margin: auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.signup_form input{
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+  background-color: rgb(86, 78, 78);
+}
+.signup_form input:hover{
+ background-color: rgb(255, 255, 255);
 }
 
-.App-link {
-  color: #61dafb;
+.signup_flex{
+  display: flex;
+  justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signup_component{
+  
+  background-image:url(https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg);
+  background-color: rgb(96, 80, 80);
 }
