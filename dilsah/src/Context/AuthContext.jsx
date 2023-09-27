@@ -4,7 +4,7 @@ import React, { Children, createContext, useState } from 'react'
 
 
 const AuthContextProvider = ({children}) => {
-  const [isAuth , setIsAuth] = useState(false);
+  const [isAuth , setIsAuth] = useState(true);
   const pass = "Dilsah"
   const em = "dilsah@gmail.com";
   

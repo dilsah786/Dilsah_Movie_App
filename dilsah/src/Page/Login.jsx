@@ -26,10 +26,12 @@ const Login = () => {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="example@gmail.com" />
-        <input type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)} />
+        <input value={em} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="example@gmail.com" />
+        <input value={pass} type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)} />
         <input type="submit" />
       </form>
+      <h1>{em}</h1>
+      <p>{pass} </p>
     </div>
   );
 };
