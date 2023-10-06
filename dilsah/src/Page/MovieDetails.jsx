@@ -6,7 +6,7 @@ const MovieDetails = () => {
   const [currLimit, setCurrLimit] = useState(10);
 
   const fetchMovie = async (currPage, currLimit) => {
-    let url = `http://localhost:3000/best_Movie?_page=${currPage}&_limit=${currLimit}`;
+    let url = `http://localhost:8080/best_Movie?_page=${currPage}&_limit=${currLimit}`;
     try {
       const result = await fetch(url);
       const res = await result.json();
