@@ -3,7 +3,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import AllRoutes from "./Routes/AllRoutes";
 import Navbar from "./Component/Navbar";
-import Navbar1 from "./Navbar1";
+
 
 function App() {
 

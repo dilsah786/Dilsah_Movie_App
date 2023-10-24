@@ -4,8 +4,8 @@ import { AuthContext } from "../Context/AuthContext";
 import { useContext } from "react";
 
 const PrivateRoute = ({ children }) => {
-  const { isAuth } = useContext(AuthContext);
-
+  // const { isAuth } = useContext(AuthContext);
+   const isAuth = false;
   console.log(isAuth);
 
   if (!isAuth) {
