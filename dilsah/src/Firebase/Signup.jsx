@@ -8,7 +8,9 @@ import {
   signInWithRedirect,
 } from "firebase/auth";
 import { auth } from "./Firebase";
-
+import styles from "./signup.module.css"
+import { Button, TextField, Box, colors } from "@mui/material";
+import Footer from "../Component/Footer";
 // export const auth = firebase.auth();
 
 // const provider = new firebase.auth.GoogleAuthProvider();
@@ -19,7 +21,10 @@ import { auth } from "./Firebase";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name,setName] = useState("");
+  const [name, setName] = useState("");
+
+
+  const help = true;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,8 +50,9 @@ const Signup = () => {
 
     const auth = getAuth();
     signInWithPopup(auth, provider)
-      .then((res) => {console.log(res)
-        setName(res.user.displayName)
+      .then((res) => {
+        console.log(res);
+        setName(res.user.displayName);
       })
       .then((err) => console.log(err));
   };
@@ -54,13 +60,30 @@ const Signup = () => {
   console.log(name);
 
   return (
-    <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} />
-        <input type="submit" />
-      </form>
+    <div className={styles.SignupComponent} >
+      <Box className={styles.SignupForm}  onSubmit={(e) => handleSubmit(e)}>
+        <TextField
+          label="Email"
+          variant="outlined"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          helperText={!help && "Incorrect Name" }
+        />
+        <br/>
+        <br/>
+        <TextField
+          id="standard-password-input"
+          label="Password"
+          variant="outlined"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <br/>
+        <Button variant="contained" sx={{ bgcolor: 'green', width: 40, height: 30 ,marginTop:2 ,marginBottom:1}} gap={2} align="center" > Submit </Button>
+      </Box>
       <button onClick={handleGoogleAuth}>Google</button>
+      <Button>Hello</Button>
+      <Footer/>
     </div>
   );
 };

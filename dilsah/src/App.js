@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
    
-    <h1 style={{color:"red"}}>Dilsah</h1>
+   
     <Navbar/>
     <AllRoutes/>
     
